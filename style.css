@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,200;1,500;1,600&display=swap');
+
+* {
+    font-family: "poppins";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(236, 127, 127);
+}
+
+
+
+#container {
+    padding-top: 2rem;
+    background-color: aliceblue;
+    width: 50vw;
+    height: 100vh;
+    margin: auto;
+}
+
+h1,h2,h3{
+    padding-bottom: 1rem;
+    color: rgba(94, 66, 66, 0.973);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+
+#dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+
+}
+
+
+input {
+    background-color: rgb(253, 231, 231);
+    width: 25%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 1rem 0.1rem;
+    padding-left: 0.5rem;
+    height: 2rem;
+
+
+}
+
+button[type="submit"] {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    background-color: rgb(228, 142, 142);
+    font-weight: 400;
+   
+}
+
+button{
+    margin: auto;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #834d1b;
+    width: 80%;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+
+#result {
+    padding: 2rem;
+    
+}
+
+#result p {
+
+}
+
+@media (max-width: 1000px){
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #container {
+        padding-top: 2rem;
+        background-color: aliceblue;
+        width: 90vw;
+        height: 100vh;
+        margin: auto;
+    }
+
+
+    #dados{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    
+    input {
+        width: 50%;
+    }
+
+    button {
+        width: 52%;
+    }
+}

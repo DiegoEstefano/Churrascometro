@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+
+        <div id="container">
+
+            <header>
+                <h1>Churrascômetro</h1>
+                <h3>O cálculo ideal para o seu churrasco!</h3>
+            </header>
+
+            <div id="dados">
+
+
+                <input id="qtda-adultos" type="number" name="qtda-adultos" placeholder="Adultos" >
+
+
+                <input id="qtda-criancas" type="number" name="qtda-criancas" placeholder="Criânças"> 
+                
+                <input id="duracao"
+                    type="number" name="duracao" placeholder="Duração(hs)" >
+
+
+            </div>
+            
+            <button onclick="calc()" id="calc" type="submit" placeholder="Calcular"> Calcular</button>
+
+            <div id="result">
+                <h2>Você vai precisar comprar:</h2>
+                <p id="qtdaCarne"> Carne:</p>
+                <p id="qtdaCerveja330"> Cerveja330:</p>
+                <p id="qtdaCerveja600"> Cerveja600:</p>
+                <p id="qtdaBebidas"> Bebidas:</p>
+            </div>
+
+
+        </div>
+
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
