@@ -86,8 +86,8 @@ button{
     
 }
 
-#result p {
-
+#result  {
+    visibility:hidden;
 }
 
 @media (max-width: 1000px){

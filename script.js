@@ -16,7 +16,7 @@ const calc = () => {
     let adultos = Number(document.getElementById("qtda-adultos").value)
     let criancas =Number( document.getElementById("qtda-criancas").value)
     let duracao = Number (document.getElementById("duracao").value)
-    let carne = duracao > 6 ? this.value = 650 : this.value = 450
+    let carne = duracao > 6 ? this.value = 650 : this.value = 400
     let cerveja = duracao > 6 ? this.value = 1500 : this.value = 1200
     let bebidas = duracao > 6 ? this.value = 1500 : this.value = 1000
 
@@ -25,7 +25,7 @@ const calc = () => {
     */
 
     let qtdaPessoas = ((criancas / 2) + adultos)
-    let qtdaCarne = qtdaPessoas * carne
+    let qtdaCarne = qtdaPessoas * carne/1000
     let qtdaCervejaLong = Math.ceil((adultos * cerveja) / 330)
     let qtdaCerveja600 = Math.ceil((adultos * cerveja) / 600)
     let qtdaBebidas = Math.ceil(qtdaPessoas * bebidas / 2000)
@@ -39,13 +39,18 @@ const calc = () => {
         }
          else if (duracao <= 0){
             window.alert("Sua festa festa não pode durar só isso.")
+        } else {
+            result.style.visibility = "visible"
         }
  
    
-    showCarne.innerText = `${qtdaCarne} Kg de Carne, ${carne} g Por pessoa` 
-    showCerveja330.innerText = `${qtdaCervejaLong} Garrafas de Cerveja LongNeck , Em torno de ${Math.ceil(qtdaCervejaLong/adultos)} LongNecks por pessoa` 
+    showCarne.innerText = `${(qtdaCarne).toFixed(3)} Kg de Carne, ${carne}g por adulto, ${ carne = criancas > 0 ? carne/2 : carne = 0 } g por criança` 
+
+    showCerveja330.innerText = `${qtdaCervejaLong} Garrafas de Cerveja LongNeck , Em torno de ${Math.ceil(qtdaCervejaLong/adultos)} LongNecks por pessoa(s)` 
+
     showCerveja600.innerText = `Se preferir, ${qtdaCerveja600} Garrafas de Cerveja 600ml , Em torno de ${Math.ceil(qtdaCerveja600/adultos)} Garrafas por pessoa` 
-    showBebidas.innerText = `${qtdaBebidas} Garrafas de 2L, ${bebidas} litros por pessoa` 
+
+    showBebidas.innerText = `${qtdaBebidas} Garrafa(s) de 2L, ${bebidas/1000} litros por pessoa` 
 
 
 }
